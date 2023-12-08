@@ -11,10 +11,10 @@ This repository represents my ongoing exploration of the MERN stack (MongoDB, Ex
 
 **Current progress:**
 
-* **I'm comfortable with the basics of HTML, CSS, and JavaScript.**
-* **I'm actively learning ReactJS and its state management libraries.**
+* **I'm comfortable with the basics of HTML, CSS**
+* **I'm actively learning Javascript**
 * **I'm exploring Node.js and Express for building backend APIs.**
-* **I'm familiar with MongoDB and its data modeling capabilities.**
+
 
 **What you'll find here:**
 
