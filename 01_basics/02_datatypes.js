@@ -3,15 +3,12 @@
 // alert(40+2);
 //we are using node js not browser.
 
-console.log(3 
-    +
-     3) // code readability should be high
+console.log(3 + 3); // code readability should be high
 
-console.log("harsh")
+console.log("harsh");
 
-
-let name = "harsh"
-let age = 24
+let name = "harsh";
+let age = 24;
 //let isLoggedIn = false
 let state;
 
@@ -22,7 +19,6 @@ let state;
 // null => standalone value - when no any value is returned or empty value returned this is called null
 // undefined => value has been not defined
 // symbol => unique
-
 
 // object
 
@@ -35,21 +31,19 @@ console.log(typeof null); // object
 
 //  7 types : String, Number, Boolearn, null, undefined, Symbol, BigInt
 
-const score = 100
-const scoreValue = 100.3
+const score = 100;
+const scoreValue = 100.3;
 
-const isLoggedIn = false
-const outsideTemp = null
+const isLoggedIn = false;
+const outsideTemp = null;
 let userEmail;
 
-const id = Symbol('123')
-const anotherId = Symbol('123')
+const id = Symbol("123");
+const anotherId = Symbol("123");
 
 console.log(id === anotherId);
 
 // const bigNumber = 3456543576654356754n
-
-
 
 // Reference (Non primitive)
 
@@ -57,13 +51,13 @@ console.log(id === anotherId);
 
 const heros = ["shaktiman", "naagraj", "doga"];
 let myObj = {
-    name: "hitesh",
-    age: 22,
-}
+  name: "hitesh",
+  age: 22,
+};
 
-const myFunction = function(){
-    console.log("Hello world");
-}
+const myFunction = function () {
+  console.log("Hello world");
+};
 
 console.log(typeof anotherId);
 
