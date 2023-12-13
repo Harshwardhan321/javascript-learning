@@ -32,3 +32,16 @@ console.log(User["Full Name"]); // Method 2
 // To access symbol we have to use second method
 
 console.log(User[sym1]);
+
+// Value Overwrite - changing the value 
+User.email = "harsh@google.com"
+
+// Value freeze - Locking the value, Cannot be chnages
+// Object.freeze(User)
+
+// Function 
+User.greeting = function(){
+    console.log("Hello Harsh");
+}
+
+console.log(User.greeting());
