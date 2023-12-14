@@ -41,7 +41,15 @@ User.email = "harsh@google.com"
 
 // Function 
 User.greeting = function(){
-    console.log("Hello Harsh");
+    console.log("Hello User");
 }
 
 console.log(User.greeting());
+console.log(User.greeting); // This will return function and reference of fun. - [Function (anonymous)] 
+
+// This Operator - It gives the reference of the properties inside the object 
+User.greetingTwo = function(){
+    console.log(`Hello JS User, ${this.name}`);
+}
+
+console.log(User.greetingTwo());
