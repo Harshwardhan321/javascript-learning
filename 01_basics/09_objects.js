@@ -117,3 +117,25 @@ console.log(Object.values(bumbleUser));
 console.log(Object.entries(bumbleUser));
 
 console.log(bumbleUser.hasOwnProperty('isLoggedIn'));
+
+// OBjects Destructuring
+
+const course = {
+    coursename: "Javascript one",
+    price: "875",
+    courseInstructor: "Hitesh"
+}
+// course.courseInstructor
+// Another syntax:
+
+const {courseInstructor: Inst} = course
+// console.log(courseInstructor);
+console.log(Inst);
+
+// API - JSON Format
+ 
+// {
+//     "name": "Harsh",
+//     "Course": "Javascript",
+//     "Price": "free"
+// }
