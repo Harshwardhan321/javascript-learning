@@ -53,3 +53,67 @@ User.greetingTwo = function(){
 }
 
 console.log(User.greetingTwo());
+
+// Singleton Objects or Declaring objects using constructor
+
+const bumbleUser = {}
+
+bumbleUser.id = "ap12k"
+bumbleUser.name = "Harry"
+bumbleUser.isLoggedin = false
+
+// console.log(bumbleUser);
+
+// Objects Nesting -:
+const regularUser ={
+    email: "some@gmail.com",
+    fullname: {
+        userfullname:{
+            firstname: "harsh",
+            lastname: "wardhan"
+        }
+    }
+}
+
+console.log(regularUser.fullname.userfullname.firstname);
+
+const obj1 = {1: "a", 2: "b"}
+const obj2 = {3: "c", 4: "d"}
+const obj3 = {5: "e", 6: "f"}
+
+const obj4 = {obj1, obj2}
+const obj5 = Object.assign({}, obj1, obj2, obj3)
+//console.log(obj5);
+
+// Object assign - a static method copies that copies all the properties from one or more source objects. It returns modified object
+// There is a concept of target and source in assign method in which first object is always considered as target followed by source objects
+// that is why blank object is added 
+
+// Spread Operator in Object-
+
+const obj6 = {...obj1, ...obj2, ...obj3}
+console.log(obj6);
+
+const users = [
+    {
+        id: 1,
+        email: "h@gmail.com"
+    },
+    {
+        id: 1,
+        email: "h@gmail.com"
+    },
+    {
+        id: 1,
+        email: "h@gmail.com"
+    },
+]
+
+users[1].email
+console.log(bumbleUser);
+
+console.log(Object.keys(bumbleUser));
+console.log(Object.values(bumbleUser));
+console.log(Object.entries(bumbleUser));
+
+console.log(bumbleUser.hasOwnProperty('isLoggedIn'));
