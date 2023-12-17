@@ -24,8 +24,8 @@ const myCoding = [
         languageFileName: "js"
     },
     {
-        languageName: "jc++",
-        languageFileName: "c++"
+        languageName: "c++",
+        languageFileName: "cpp"
     },
     {
         languageName: "python",
