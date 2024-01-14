@@ -7,8 +7,26 @@
 </head>
 <body>
     <h1>code with chai tutorials</h1>
+    <button id="stop"> Stop </button>
 </body>
 <script>
-    
+    const sayName = function() {
+        console.log("Harsh");
+    }
+    const changeText = function() {
+        document.querySelector('h1').innerHTML = "Best JS series on YT"
+    }
+
+    const chanegMe = setTimeout(changeText, 2000) 
+    // 2000 = 2 seconds (Time is in milisecond)
+
+    document.querySelector('#stop').addEventListener('click', function() {
+        clearTimeout(chanegMe)
+        console.log("stopped");
+    })
+
 </script>
 </html>
+<!-- Blocking code - Block the flow of program (Read File Synchronus) -->
+<!-- Non-blocking code - Does not block execution (Read File Asynchronus) -->
+<!-- Both have usecases, nothing is better or worst -->

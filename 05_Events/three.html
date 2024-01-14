@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>code with JS tutorials</h1>
+    <button id="start"> Start </button>
+    <button id="stop"> Stop </button>
+    
+<script>
+   // Declare intervalId outside the event handlers
+   let intervalId;
+
+   const sayDate = function(str) {
+      console.log("harsh", Date.now());
+   }
+   
+   document.querySelector('#start').addEventListener('click', function() {
+        // Assign intervalId in the outer scope
+        intervalId = setInterval(sayDate, 1000, "Hi");
+    })
+
+    document.querySelector('#stop').addEventListener('click', function() {
+        clearInterval(intervalId);
+        console.log("stopped");
+    })
+</script>
+</body>
+</html>
