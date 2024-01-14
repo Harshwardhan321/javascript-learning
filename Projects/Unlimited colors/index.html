@@ -4,11 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* Style for the rounded box */
+        #color-box {
+            width: 60px;
+            height: 25px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 15px;
+        }
+
+        /* Style for the hex color display */
+        #hex-display {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
 </head>
 <body style="background-color: black; color: white">
     <h1>Click start to change color every second</h1>
     <button id="start">Start</button>
     <button id="stop">Stop</button>
+    <div id="color-box">
+        <div id="hex-display">#000000</div>
+    </div>
 </body>
 
 <script src="app.js"></script>
