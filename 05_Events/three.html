@@ -26,6 +26,7 @@
     document.querySelector('#stop').addEventListener('click', function() {
         clearInterval(intervalId);
         console.log("stopped");
+        intervalId = null;
     })
 </script>
 </body>
