@@ -18,9 +18,9 @@ const startChangingColor = function () {
         intervalId = setInterval(changeColor, 1000);
     }
 
-    const newColor = randomColor();
+    // const newColor = randomColor();
     function changeColor() {
-        document.body.style.backgroundColor = newColor;
+        document.body.style.backgroundColor = randomColor();
         // document.getElementById('hex-display').innerText = newColor;
     }
      // Update the hex color display
