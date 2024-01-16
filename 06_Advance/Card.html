@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            width: 300px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 10px;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .card-content {
+            padding: 16px;
+        }
+
+        .follower-count {
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card" id="userCard">
+    <img id="userImage" alt="Person Image">
+    <div class="card-content">
+        <h2 id="userName">User Name</h2>
+        <p class="follower-count" id="followerCount">Followers: </p>
+    </div>
+</div>
+
+<div class="card" id="userCard2">
+    <img id="userImage2" alt="Person Image">
+    <div class="card-content">
+        <h2 id="userName2">User Name</h2>
+        <p class="follower-count" id="followerCount2">Followers: </p>
+    </div>
+</div>
+
+<script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary';
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl);
+    xhr.onreadystatechange = function() {
+        if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText);
+            document.getElementById('userImage').src = data.avatar_url;
+            document.getElementById('userName').textContent = data.login;
+            document.getElementById('followerCount').textContent = 'Followers: ' + data.followers;
+        }
+    }
+    xhr.send();
+
+    const requestUrl2 = 'https://api.github.com/users/Harshwardhan321';
+    const xhr2 = new XMLHttpRequest();
+    xhr2.open('GET', requestUrl2);
+    xhr2.onreadystatechange = function() {
+        if(xhr2.readyState === 4){
+            const data = JSON.parse(this.responseText);
+            document.getElementById('userImage2').src = data.avatar_url;
+            document.getElementById('userName2').textContent = data.login;
+            document.getElementById('followerCount2').textContent = 'Followers: ' + data.followers;
+        }
+    }
+    xhr2.send();
+</script>
+
+</body>
+</html>
